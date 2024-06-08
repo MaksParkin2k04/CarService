@@ -11,14 +11,14 @@ namespace CarService.Model {
         /// Заказ ремонта автомобиля
         /// </summary>
         /// <param name="id">Идентификатор</param>
-        /// <param name="automobile">Автомобиль</param>
+        /// <param name="car">Автомобиль</param>
         /// <param name="carOwner">Владелец автомобиля</param>
         /// <param name="master">Мастер который будет выполнять ремонт</param>
         /// <param name="typeRepairs">Список неисправностей</param>
         /// <param name="startRepair">Время начала ремонта</param>
-        public RepairOrder(Guid id, Car automobile, CarOwner carOwner, Master master, IEnumerable<Malfunction> typeRepairs, DateTime startRepair) {
+        public RepairOrder(Guid id, Car car, CarOwner carOwner, Master master, IEnumerable<Malfunction> typeRepairs, DateTime startRepair) {
             Id = id;
-            Car = automobile;
+            Car = car;
             CarOwner = carOwner;
             Master = master;
             Repairs = typeRepairs != null ? new List<Malfunction>(typeRepairs) : new List<Malfunction>();
